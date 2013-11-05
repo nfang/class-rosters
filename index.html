@@ -14,21 +14,22 @@
   </head>
   <body>
     <div class="container class-roster-container" ng-controller="ClassRosterCtrl">
-
-    <div class="top-nav btn-toolbar">
-      <div class="btn-group btn-group-lg">
-        <a class="btn btn-primary active" href="#home"><span class="glyphicon glyphicon-home"></span></a>
-        <a class="btn btn-primary" href="#user"><span class="fui-user"></span></a>
-        <a class="btn btn-primary" href="#search"><span class="fui-search"></span></a>
-        <a class="btn btn-primary" href="#settings"><span class="fui-gear"></span></a>
-      </div>
-    </div>
-
+    <header>
+      <nav class="btn-toolbar">
+        <div class="app-links btn-group btn-group-lg">
+          <a class="btn btn-primary active" href="#home"><span class="glyphicon glyphicon-home"></span></a>
+          <a class="btn btn-primary" href="#user"><span class="fui-user"></span></a>
+          <a class="btn btn-primary" href="#search"><span class="fui-search"></span></a>
+          <a class="btn btn-primary" href="#settings"><span class="fui-gear"></span></a>
+        </div>
+      </nav>
+    </header>
+    
     <div class="page-title clearfix">
       <div id="btnBack" class="btn btn-block btn-default">
         <span class="nav-back glyphicon glyphicon-chevron-left"></span> Back
       </div>
-      <h6 class="header">Class Rosters</h6>
+      <h6>Class Rosters</h6>
     </div>
 
     <div class="class-selection">
@@ -46,34 +47,34 @@
     </div>
 
     <div ng-model="selectedClass">
-      <h6 class="section-title">(( selectedClass.name ))</h6>
-      <ul class="rosters">
+      <h6 class="roster-header">(( selectedClass.name ))</h6>
+      <ul class="roster">
         <!-- Binding teacher list -->
-        <li class="roster roster-teacher clearfix" ng-repeat="person in selectedClass.teacher_list">
+        <li class="person person-teacher clearfix" ng-repeat="p in selectedClass.teacher_list">
           <div class="avatar">
-            <img src="(( person.teacher.avatar_medium ))" 
-                 alt="(( person.teacher.first_name + person.teacher.last_name ))" />
+            <img src="(( p.teacher.avatar_medium ))" 
+                 alt="(( p.teacher.first_name + p.teacher.last_name ))" />
           </div>
           <div class="nav-detail">
             <a href="#" class="glyphicon glyphicon-chevron-right"></a>
           </div>
-          <div class="roster-name">
-            (( person.teacher.first_name )) (( person.teacher.last_name ))
+          <div class="person-name">
+            (( p.teacher.first_name )) (( p.teacher.last_name ))
           </div>
-          <div class="roster-type">Teacher</div>
+          <div class="person-type">Teacher</div>
         </li>
 
         <!-- Binding student list -->
-        <li class="roster clearfix" ng-repeat="person in selectedClass.student_list">
+        <li class="person clearfix" ng-repeat="p in selectedClass.student_list">
           <div class="avatar">
-            <img src="(( person.student.avatar_medium ))" 
-                 alt="(( person.student.first_name + person.student.last_name ))" />
+            <img src="(( p.student.avatar_medium ))" 
+                 alt="(( p.student.first_name + p.student.last_name ))" />
           </div>
           <div class="nav-detail">
             <a href="#" class="glyphicon glyphicon-chevron-right"></a>
           </div>
-          <div class="roster-name">
-            (( person.student.first_name )) (( person.student.last_name ))
+          <div class="person-name">
+            (( p.student.first_name )) (( p.student.last_name ))
           </div>
         </li>
       </ul>
