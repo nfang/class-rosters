@@ -12,13 +12,13 @@ ul, ol {
   width: 480px;
 }
 
-.class-roster-container .btn-group-lg > .btn {
+.app-links > .btn {
   border-radius: 0;
   width: 120px;
 }
 
-.class-roster-container .btn-group-lg > .btn,
-.class-roster-container .btn-toolbar .btn > [class^="fui-"] {
+.app-links > .btn,
+.app-links > .btn > [class^="fui-"] {
   font-size: 38px;
 }
 
@@ -27,11 +27,15 @@ ul, ol {
 }
 
 .class-selection {
-  background-color: #f5f5f5;
   border-top: 1px solid #f0f2f4;
   border-bottom: 1px solid #f0f2f4;
-  padding: .5em 0;
-  /* Add shadow */
+  padding: 8px 0;
+}
+
+.class-selection,
+.class-selection > .radio > .icons > .fui-radio-checked,
+.class-selection > .radio > .icons > .fui-radio-unchecked {
+  background-color: #f5f5f5;
 }
 
 .class-selection .class-name {
@@ -48,21 +52,16 @@ ul, ol {
   line-height: 26px;
 }
 
-.class-selection > .radio > .icons > .fui-radio-checked,
-.class-selection > .radio > .icons > .fui-radio-unchecked {
-  background-color: #f5f5f5;
-}
-
-.section-title {
+.roster-header {
   font-style: italic;
   padding: 14px 0 14px 36px;
 }
 
-.rosters {
+.roster {
   list-style-type: none;
 }
 
-.rosters > .roster {
+.roster > .person {
   border-top: 1px solid #dee2e4;
   color: #3498db;
   font-size: 24px;
@@ -70,38 +69,37 @@ ul, ol {
   padding: 5px 0 5px 36px;
 }
 
-.rosters > .roster:last-child {
+.roster > .person:last-child {
   border-bottom: 1px solid #dee2e4; 
 }
 
-.roster > .nav-detail {
+.person > .nav-detail {
   float: right;
   line-height: 90px;
   margin-right: 10px;
 }
 
-.roster > .nav-detail > .glyphicon { color: #bbb; }
+.person > .nav-detail > .glyphicon { color: #bbb; }
 
-.rosters > .roster.roster-teacher {
+.person.person-teacher {
   color: #1abc9c;
   line-height: 45px;
 }
 
-.rosters > .roster > .avatar {
+.person > .avatar {
   float: left;
   margin-right: 36px;
 }
 
-.rosters > .roster > .avatar > img { width: 90px; }
+.person > .avatar > img { width: 90px; }
 
-.rosters > .roster > .roster-type { color: #777; }
+.person > .person-type { color: #777; }
 
 #btnBack {
   color: #777;
   font-size: 18px;
   float: left;
-  margin-left: 20px;
-  margin-right: 36px;
+  margin: 0 36px 0 20px;
   text-align: left;
   width: 120px;
 }
