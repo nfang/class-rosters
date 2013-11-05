@@ -1,0 +1,109 @@
+body {
+  color: #777;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+.container.class-roster-container {
+  padding: 0;
+  width: 480px;
+}
+
+.class-roster-container .btn-group-lg > .btn {
+  border-radius: 0;
+  width: 120px;
+}
+
+.class-roster-container .btn-group-lg > .btn,
+.class-roster-container .btn-toolbar .btn > [class^="fui-"] {
+  font-size: 38px;
+}
+
+.page-title {
+  padding-top: 10px;
+}
+
+.class-selection {
+  background-color: #f5f5f5;
+  border-top: 1px solid #f0f2f4;
+  border-bottom: 1px solid #f0f2f4;
+  padding: .5em 0;
+  /* Add shadow */
+}
+
+.class-selection .class-name {
+  padding-left: 30px;
+}
+
+.class-selection > .radio {
+  font-size: 20px;
+  margin-left: 36px;
+}
+
+.class-selection > .radio > .icons {
+  font-size: 25px;
+  line-height: 26px;
+}
+
+.class-selection > .radio > .icons > .fui-radio-checked,
+.class-selection > .radio > .icons > .fui-radio-unchecked {
+  background-color: #f5f5f5;
+}
+
+.section-title {
+  font-style: italic;
+  padding: 14px 0 14px 36px;
+}
+
+.rosters {
+  list-style-type: none;
+}
+
+.rosters > .roster {
+  border-top: 1px solid #dee2e4;
+  color: #3498db;
+  font-size: 24px;
+  line-height: 90px;
+  padding: 5px 0 5px 36px;
+}
+
+.rosters > .roster:last-child {
+  border-bottom: 1px solid #dee2e4; 
+}
+
+.roster > .nav-detail {
+  float: right;
+  line-height: 90px;
+  margin-right: 10px;
+}
+
+.roster > .nav-detail > .glyphicon { color: #bbb; }
+
+.rosters > .roster.roster-teacher {
+  color: #1abc9c;
+  line-height: 45px;
+}
+
+.rosters > .roster > .avatar {
+  float: left;
+  margin-right: 36px;
+}
+
+.rosters > .roster > .avatar > img { width: 90px; }
+
+.rosters > .roster > .roster-type { color: #777; }
+
+#btnBack {
+  color: #777;
+  font-size: 18px;
+  float: left;
+  margin-left: 20px;
+  margin-right: 36px;
+  text-align: left;
+  width: 120px;
+}
+
+#btnBack > .nav-back { margin-right: 20px; }
