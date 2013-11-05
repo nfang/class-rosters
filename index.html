@@ -37,25 +37,25 @@
           <span class="first-icon fui-radio-unchecked"></span>
           <span class="second-icon fui-radio-checked"></span>
         </span>
-        <input type="radio" name="classSelection" value="{{ class.id }}" >
-        <span class="class-name">{{ class.name }}</span>
+        <input type="radio" name="classSelection" value="(( class.id ))" >
+        <span class="class-name">(( class.name ))</span>
       </label>
     </div>
 
     <div ng-model="selectedClass">
-      <h6 class="section-title">{{ selectedClass.name }}</h6>
+      <h6 class="section-title">(( selectedClass.name ))</h6>
       <ul class="rosters">
         <!-- Binding teacher list -->
         <li class="roster roster-teacher clearfix" ng-repeat="person in selectedClass.teacher_list">
           <div class="avatar">
-            <img src="{{ person.teacher.avatar_medium }}" 
-                 alt="{{ person.teacher.first_name + person.teacher.last_name }}" />
+            <img src="(( person.teacher.avatar_medium ))" 
+                 alt="(( person.teacher.first_name + person.teacher.last_name ))" />
           </div>
           <div class="nav-detail">
             <a href="#" class="glyphicon glyphicon-chevron-right"></a>
           </div>
           <div class="roster-name">
-            {{ person.teacher.first_name }} {{ person.teacher.last_name }}
+            (( person.teacher.first_name )) (( person.teacher.last_name ))
           </div>
           <div class="roster-type">Teacher</div>
         </li>
@@ -63,14 +63,14 @@
         <!-- Binding student list -->
         <li class="roster clearfix" ng-repeat="person in selectedClass.student_list">
           <div class="avatar">
-            <img src="{{ person.student.avatar_medium }}" 
-                 alt="{{ person.student.first_name + person.student.last_name }}" />
+            <img src="(( person.student.avatar_medium ))" 
+                 alt="(( person.student.first_name + person.student.last_name ))" />
           </div>
           <div class="nav-detail">
             <a href="#" class="glyphicon glyphicon-chevron-right"></a>
           </div>
           <div class="roster-name">
-            {{ person.student.first_name }} {{ person.student.last_name }}
+            (( person.student.first_name )) (( person.student.last_name ))
           </div>
         </li>
       </ul>

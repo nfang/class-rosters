@@ -1,6 +1,11 @@
-angular.module('ClassRoster', ['ngResource']);
+var ClassRosterApp = angular.module('ClassRoster', ['ngResource']);
 
-function ClassRosterCtrl($scope, $resource) {
+ClassRosterApp.config(function($interpolateProvider) {
+  $interpolateProvider.startSymbol('((');
+  $interpolateProvider.endSymbol('))');
+});
+
+ClassRosterApp.controller('ClassRosterCtrl', function ClassRosterCtrl($scope, $resource) {
   $scope.source = $resource(
     'http://42.121.35.233\\:9001/school/api/:version/class/my/?format=:format&username=:username&api_key=:api_key'
     , { 
@@ -22,7 +27,7 @@ function ClassRosterCtrl($scope, $resource) {
   }
 
   $scope.selectedClass = $scope.RosterResult.objects[0];
-}
+});
 
 $(function () {
   $('.class-selection > .radio').eq(0).addClass('checked');
