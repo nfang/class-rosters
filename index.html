@@ -14,6 +14,7 @@
   </head>
   <body>
     <div class="container class-roster-container" ng-controller="ClassRosterCtrl">
+
     <div class="top-nav btn-toolbar">
       <div class="btn-group btn-group-lg">
         <a class="btn btn-primary active" href="#home"><span class="glyphicon glyphicon-home"></span></a>
@@ -31,8 +32,10 @@
     </div>
 
     <div class="class-selection">
-      <label class="radio" ng-repeat="class in RosterResult.objects"
-        ng-click="ListRosters( class )">
+      <label class="radio" 
+             ng-class="{checked: i == 0}"
+             ng-click="ListRosters( class )"
+             ng-repeat="(i, class) in RosterResult.objects">
         <span class="icons">
           <span class="first-icon fui-radio-unchecked"></span>
           <span class="second-icon fui-radio-checked"></span>
