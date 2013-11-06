@@ -10,7 +10,7 @@ def index(request):
   cb = request.GET.get("callback")
 
   # When 'callback' method is not provided, return raw JSON
-  if cb == "":
+  if cb is None or cb == "":
     httpResp = HttpResponse(json.dumps(data), content_type="application/json")
   else:    
     httpResp = HttpResponse(
