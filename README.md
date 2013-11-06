@@ -1,0 +1,1 @@
+Launch server in django, then either open static/index.html or go to http://localhost:8000/web/.
