@@ -31,6 +31,8 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-US'
 
+LOCALE_PATHS = ("/Users/nfang/Github/class-rosters/django/locale/",)
+
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -107,7 +109,7 @@ ROOT_URLCONF = 'backend.urls'
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "/Users/nfang/Github/class-rosters/backend/web/templates"
+    "/Users/nfang/Github/class-rosters/django/web/templates"
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.

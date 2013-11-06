@@ -14,8 +14,12 @@ framework.
 
 """
 import os
+import sys
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "backend.settings")
+
+reload(sys) 
+sys.setdefaultencoding('utf8')
 
 # This application object is used by any WSGI server configured to use this
 # file. This includes Django's development server, if the WSGI_APPLICATION
