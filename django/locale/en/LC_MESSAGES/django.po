@@ -1,0 +1,7 @@
+#: web/templates/web/index.html:32
+msgid "Back"
+msgstr "Back"
+
+#: web/templates/web/index.html:66
+msgid "Teacher"
+msgstr "Teacher"

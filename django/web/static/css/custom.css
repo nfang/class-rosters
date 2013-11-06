@@ -1,0 +1,110 @@
+body {
+  color: #999;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+.container.class-roster-container {
+  padding: 0;
+  width: 480px;
+}
+
+.app-links > .btn {
+  border-radius: 0;
+  width: 120px;
+}
+
+.app-links > .btn,
+.app-links > .btn > [class^="fui-"] {
+  font-size: 38px;
+}
+
+.page-title {
+  padding-top: 10px;
+}
+
+.class-selection {
+  border-top: 1px solid #f0f2f4;
+  border-bottom: 1px solid #f0f2f4;
+  padding: 8px 0;
+}
+
+.class-selection,
+.class-selection > .radio > .icons > .fui-radio-checked,
+.class-selection > .radio > .icons > .fui-radio-unchecked {
+  background-color: #f5f5f5;
+}
+
+.class-selection .class-name {
+  padding-left: 30px;
+}
+
+.class-selection > .radio {
+  font-size: 20px;
+  margin-left: 36px;
+}
+
+.class-selection > .radio > .icons {
+  font-size: 25px;
+  line-height: 26px;
+}
+
+.roster-header {
+  font-style: italic;
+  padding: 14px 0 14px 36px;
+}
+
+.roster {
+  list-style-type: none;
+}
+
+.roster > .person {
+  border-top: 1px solid #dee2e4;
+  color: #3498db;
+  font-size: 24px;
+  line-height: 90px;
+  padding: 5px 0 5px 36px;
+}
+
+.roster > .person:last-child {
+  border-bottom: 1px solid #dee2e4; 
+}
+
+.person > .nav-detail {
+  float: right;
+  line-height: 90px;
+  margin-right: 10px;
+}
+
+.person > .nav-detail > .glyphicon { color: #bbb; }
+
+.person.person-teacher {
+  color: #1abc9c;
+  line-height: 45px;
+}
+
+.person > .avatar {
+  float: left;
+  margin-right: 36px;
+}
+
+.person > .avatar > img { width: 90px; }
+
+.person > .person-type { color: #7e8c98; }
+
+#btnBack {
+  background-color: #d7dcde;
+  border-radius: 10px;
+  color: #777;
+  font-size: 20px;
+  float: left;
+  margin: 0 36px 0 20px;
+  padding: 10px;
+  text-align: left;
+  width: 120px;
+}
+
+#btnBack > .nav-back { margin-right: 10px; }
