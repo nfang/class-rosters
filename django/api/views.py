@@ -9,8 +9,12 @@ def index(request):
 
   cb = request.GET.get("callback")
 
-  httpResp = HttpResponse(
-    cb + "(" + json.dumps(data) + ")", 
-    content_type="application/javascript")
+  # When 'callback' method is not provided, return raw JSON
+  if cb == "":
+    httpResp = HttpResponse(json.dumps(data), content_type="application/json")
+  else:    
+    httpResp = HttpResponse(
+      "%s(%s)" % (cb, json.dumps(data)), 
+      content_type="application/javascript")
 
   return httpResp
