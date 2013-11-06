@@ -31,7 +31,9 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-US'
 
-LOCALE_PATHS = ("/Users/nfang/Github/class-rosters/django/locale/",)
+HERE = os.path.dirname(os.path.dirname(__file__))
+
+LOCALE_PATHS = (os.path.join(HERE, 'locale').replace('\\', '/'),)
 
 SITE_ID = 1
 
@@ -45,8 +47,6 @@ USE_L10N = True
 
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
-
-HERE = os.path.dirname(os.path.dirname(__file__))
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
@@ -109,7 +109,7 @@ ROOT_URLCONF = 'backend.urls'
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 TEMPLATE_DIRS = (
-    "/Users/nfang/Github/class-rosters/django/web/templates"
+    os.path.join(HERE,'web/templates/').replace('\\','/'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
